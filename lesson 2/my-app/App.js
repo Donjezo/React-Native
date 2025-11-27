@@ -7,6 +7,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MainScreen from "./screens/MainScreen";
 
 import ListScreen from "./screens/ListScreen"; // 👈 like ListScreen in the example
+import StudentDetail from "./components/StudentDetail";
+import StudentScreen from "./screens/StudentScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -26,7 +28,8 @@ export default function App() {
 
     //   <StatusBar style="auto" />
     // </NavigationContainer>
-    <ListScreen></ListScreen>
+   // <ListScreen></ListScreen>
+    <StudentScreen></StudentScreen>
   );
 }
 
