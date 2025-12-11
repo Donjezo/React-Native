@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, View, FlatList } from "react-native";
+import { Text, StyleSheet, View, FlatList, Button } from "react-native";
 
 const students = [
   { name: "Eden", surname: "Rocha", age: "17" },
@@ -20,6 +20,10 @@ const ListScreen = () => {
             {item.name} {item.surname} — Age {item.age}
           </Text>
         )}
+      />
+      <Button
+        title="Back to Main"
+        onPress={() => navigation.navigate("Main")}
       />
     </View>
   );
