@@ -8,25 +8,24 @@ import ListScreen from "./screens/ListScreen";
 import StudentScreen from "./screens/StudentScreen";
 import ProfileScreen from "./screens/ProfileScreen";
 import BoxScreen from "./screens/BoxScreen";
+import PostsScreen from "./screens/PostsScreen";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    //    <NavigationContainer>
-    //      <Stack.Navigator
-    //      initialRouteName="Main"
-    //      screenOptions={{
-    //         title: "My App",
-    //      }}
-    //     >
-    //      //  <Stack.Screen name="Main" component={MainScreen} />
-    //       <Stack.Screen name="List" component={ListScreen} />
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Main"
+        screenOptions={{
+          title: "My App",
+        }}
+      >
+        <Stack.Screen name="Main" component={MainScreen} />
+        <Stack.Screen name="List" component={PostsScreen} />
+      </Stack.Navigator>
 
-    //      </Stack.Navigator>
-
-    //    <StatusBar style="auto" />
-    //  </NavigationContainer>
-   <BoxScreen/>
+      <StatusBar style="auto" />
+    </NavigationContainer>
   );
 }
