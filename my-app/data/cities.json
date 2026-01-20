@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "New York",
+    "countryCode": "US",
+    "population": 8419600,
+    "description": "Largest city in the United States."
+  },
+  {
+    "id": 2,
+    "name": "Los Angeles",
+    "countryCode": "US",
+    "population": 3980400,
+    "description": "Known for its Mediterranean climate and entertainment industry."
+  },
+  {
+    "id": 3,
+    "name": "Toronto",
+    "countryCode": "CA",
+    "population": 2930000,
+    "description": "Largest city in Canada and a major cultural centre."
+  },
+  {
+    "id": 4,
+    "name": "London",
+    "countryCode": "GB",
+    "population": 8982000,
+    "description": "Capital of the United Kingdom."
+  },
+  {
+    "id": 5,
+    "name": "Berlin",
+    "countryCode": "DE",
+    "population": 3645000,
+    "description": "Capital city of Germany with rich history."
+  },
+  {
+    "id": 6,
+    "name": "Paris",
+    "countryCode": "FR",
+    "population": 2148000,
+    "description": "Capital of France, known for art and cuisine."
+  },
+  {
+    "id": 7,
+    "name": "Mumbai",
+    "countryCode": "IN",
+    "population": 12442373,
+    "description": "Finance and entertainment centre of India."
+  },
+  {
+    "id": 8,
+    "name": "Beijing",
+    "countryCode": "CN",
+    "population": 21540000,
+    "description": "Capital of China and a historical centre."
+  },
+  {
+    "id": 9,
+    "name": "Tokyo",
+    "countryCode": "JP",
+    "population": 13929286,
+    "description": "Capital of Japan and one of the world's largest cities."
+  },
+  {
+    "id": 10,
+    "name": "Sydney",
+    "countryCode": "AU",
+    "population": 5312000,
+    "description": "Largest city in Australia with iconic harbour."
+  }
+]

@@ -1,33 +1,29 @@
 import React, { Component } from "react";
 import { View, Text, FlatList, StyleSheet } from "react-native";
-import data from "../data/countries.json";
+import data from "../data/cities.json";
 
-class CountriesScreen extends Component {
+class CitiesScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      countries: [],
+      cities: [],
     };
   }
 
   componentDidMount() {
-    // Fetching data from local JSON file
-    this.setState({
-      countries: data,
-    });
+    this.setState({ cities: data });
   }
 
   renderItem = ({ item }) => {
-    const { name, code, capital, population, region } = item;
+    const { name, countryCode, population, description } = item;
 
     return (
       <View style={styles.cardWrapper}>
-        <Text style={styles.title}>Country: {name}</Text>
-        <Text style={styles.subtitle}>
-          Code: {code} — Capital: {capital}
-        </Text>
-        <Text style={styles.description}>
-          Region: {region} • Population:{" "}
+        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.subtitle}>Country Code: {countryCode}</Text>
+        <Text style={styles.description}>{description}</Text>
+        <Text style={styles.small}>
+          Population:{" "}
           {population?.toLocaleString
             ? population.toLocaleString()
             : population}
@@ -39,16 +35,12 @@ class CountriesScreen extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.screenTitle}>Countries Screen</Text>
+        <Text style={styles.screenTitle}>Cities</Text>
 
         <FlatList
-          data={this.state.countries}
+          data={this.state.cities}
           keyExtractor={(item, index) =>
-            item.id
-              ? item.id.toString()
-              : item.code
-              ? item.code
-              : index.toString()
+            item.id ? item.id.toString() : index.toString()
           }
           renderItem={this.renderItem}
         />
@@ -57,7 +49,7 @@ class CountriesScreen extends Component {
   }
 }
 
-export default CountriesScreen;
+export default CitiesScreen;
 
 const styles = StyleSheet.create({
   container: {
@@ -71,7 +63,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   cardWrapper: {
-    backgroundColor: "#f2f2f2",
+    backgroundColor: "#f9f9f9",
     padding: 12,
     marginBottom: 10,
     borderRadius: 8,
@@ -88,5 +80,10 @@ const styles = StyleSheet.create({
     fontSize: 13,
     marginTop: 6,
     color: "#555",
+  },
+  small: {
+    marginTop: 6,
+    fontSize: 12,
+    color: "#777",
   },
 });

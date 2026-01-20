@@ -10,6 +10,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 // import BoxScreen from "./screens/BoxScreen";
 // import PostsScreen from "./screens/PostsScreen";
 import CountriesScreen from "./screens/CountriesScreen";
+import Cities from "./screens/CitiesScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,6 @@ export default function App() {
 
     //   <StatusBar style="auto" />
     // </NavigationContainer>
-    <CountriesScreen></CountriesScreen>
+    <Cities></Cities>
   );
 }

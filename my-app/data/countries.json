@@ -1,0 +1,72 @@
+[
+  {
+    "name": "United States",
+    "code": "US",
+    "capital": "Washington, D.C.",
+    "population": 331002651,
+    "region": "Americas"
+  },
+  {
+    "name": "Canada",
+    "code": "CA",
+    "capital": "Ottawa",
+    "population": 37742154,
+    "region": "Americas"
+  },
+  {
+    "name": "United Kingdom",
+    "code": "GB",
+    "capital": "London",
+    "population": 67886011,
+    "region": "Europe"
+  },
+  {
+    "name": "Germany",
+    "code": "DE",
+    "capital": "Berlin",
+    "population": 83783942,
+    "region": "Europe"
+  },
+  {
+    "name": "France",
+    "code": "FR",
+    "capital": "Paris",
+    "population": 65273511,
+    "region": "Europe"
+  },
+  {
+    "name": "India",
+    "code": "IN",
+    "capital": "New Delhi",
+    "population": 1380004385,
+    "region": "Asia"
+  },
+  {
+    "name": "China",
+    "code": "CN",
+    "capital": "Beijing",
+    "population": 1439323776,
+    "region": "Asia"
+  },
+  {
+    "name": "Japan",
+    "code": "JP",
+    "capital": "Tokyo",
+    "population": 126476461,
+    "region": "Asia"
+  },
+  {
+    "name": "Australia",
+    "code": "AU",
+    "capital": "Canberra",
+    "population": 25499884,
+    "region": "Oceania"
+  },
+  {
+    "name": "Brazil",
+    "code": "BR",
+    "capital": "Brasília",
+    "population": 212559417,
+    "region": "Americas"
+  }
+]
