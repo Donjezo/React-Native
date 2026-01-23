@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, Button } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 
 const Home = () => {
@@ -14,6 +14,10 @@ const Home = () => {
       >
         <Text style={styles.buttonText}>GO TO ABOUT SCREEN</Text>
       </TouchableOpacity>
+
+      <Text>Drawer Navigation Button Functionality</Text>
+
+      <Button title="Open Drawer" onPress={() => navigation.openDrawer()} />
     </View>
   );
 };
