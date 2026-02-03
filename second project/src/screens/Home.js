@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
 import Swiper from "react-native-swiper";
+import Icon from "../components/Icons";
 
 const Home = () => {
   return (
@@ -33,6 +34,18 @@ const Home = () => {
           />
         </View>
       </Swiper>
+
+      <View style={styles.iconsContainer}>
+        <Icon name="cellphone-iphone" iconText="iPhone" />
+        <Icon name="android" iconText="Samsung" />
+        <Icon name="laptop" iconText="Laptop" />
+      </View>
+
+      <View style={styles.iconsContainer}>
+        <Icon name="tablet" iconText="Tablet" />
+        <Icon name="mouse" iconText="Mouse" />
+        <Icon name="keyboard-outline" iconText="Keyboard" />
+      </View>
     </View>
   );
 };
@@ -43,7 +56,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   swiper: {
-    flex: 1,
+    height: 200,
   },
   slide: {
     flex: 1,
@@ -55,6 +68,13 @@ const styles = StyleSheet.create({
     width: "90%",
     height: "90%",
     borderRadius: 10,
+  },
+  iconsContainer: {
+    width: "90%",
+    alignSelf: "center",
+    marginTop: 30,
+    flexDirection: "row",
+    justifyContent: "space-between",
   },
 });
 
