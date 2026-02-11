@@ -4,6 +4,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 import { MainStackNavigator, AboutStackNavigator } from "./StackNavigator";
 import IosStackNavigator from "./IosStackNavigator";
+import AndroidStackNavigator from "./AndroidStackNavigaror";
 
 const Tab = createBottomTabNavigator();
 
@@ -31,6 +32,21 @@ const BottomTabNavigator = () => {
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons
               name="cellphone-iphone"
+              size={26}
+              color={color}
+            />
+          ),
+        }}
+      />
+
+       <Tab.Screen
+        name="Android"
+        component={AndroidStackNavigator}
+        options={{
+          tabBarLabel: "Androic",
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons
+              name="phone"
               size={26}
               color={color}
             />
