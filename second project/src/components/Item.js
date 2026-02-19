@@ -1,20 +1,32 @@
 import React from "react";
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 const Item = ({ item }) => {
-  return (
-    <View style={styles.cardContainer}>
-      <Image source={{ uri: item.image }} style={styles.img} />
 
-      <View style={styles.textContainer}>
-        <Text style={styles.name}>{item.name}</Text>
-        <Text style={styles.category}>{item.category}</Text>
-        <Text style={styles.desc}>{item.description}</Text>
-        <Text style={styles.price}>{item.price}</Text>
+  const navigation = useNavigation();
+
+  return (
+    <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={() => navigation.navigate("Single", { item })}
+    >
+      <View style={styles.cardContainer}>
+        <Image source={{ uri: item.image }} style={styles.img} />
+
+        <View style={styles.textContainer}>
+          <Text style={styles.name}>{item.name}</Text>
+          <Text style={styles.category}>{item.category}</Text>
+          <Text style={styles.desc}>{item.description}</Text>
+          <Text style={styles.price}>{item.price}</Text>
+        </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
+
+export default Item;
+
 
 const styles = StyleSheet.create({
   cardContainer: {
@@ -54,4 +66,3 @@ const styles = StyleSheet.create({
 });
 
 
-export default Item;
