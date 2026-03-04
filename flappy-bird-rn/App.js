@@ -5,6 +5,7 @@ import {
   Dimensions,
   TouchableWithoutFeedback,
   Text,
+  Image
 } from "react-native";
 import Bird from "./src/components/Bird";
 import Obstacles from "./src/components/Obstacles";
@@ -134,6 +135,10 @@ export default function App() {
   return (
     <TouchableWithoutFeedback onPress={jump}>
       <View style={styles.container}>
+          <Image
+        source={require('./assets/background.png')}
+        style={styles.backgroundImage}
+      />
        
         <Text style={styles.score}>{score}</Text>
 
@@ -164,14 +169,20 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
   },
+
+  backgroundImage: {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+  },
+
   score: {
-    position: "absolute",
-    top: 60,
-    left: 20,
-    fontSize: 32,
-    fontWeight: "bold",
-    zIndex: 10,
+    position: 'absolute',
+    top: 50,
+    alignSelf: 'center',
+    fontSize: 40,
+    fontWeight: 'bold',
+    zIndex: 1,
   },
 });
